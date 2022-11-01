@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yasutaka Hisano</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar">
+        <h2 class="logo">Yasutaka Hisano</h2>
+        <ul class="menu">
+          <li><a href="#">About me</a></li>
+          <li class="text-skill">Skills</li>
+          <li><a href="/index.html/text-internship/">Internship</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="www.linkedin.com/in/yasutaka-hisano-b00579243">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="text-area">
+      <h2>About myself</h2>
+      <p class="text">
+        Hello. Thank you for visiting my website. My name is Yasutaka Hisano
+        and I am from Japan. I am currently studying at the University
+        of Toronto in Canada. I am in 2nd year and studying computer science at the univeristy.
+
+      </p>
+    </div>
+    <main>
+      <ul class="contents">
+        <li class="animationTarget">
+          <img src="./image/skill.webp" alt="">
+          <div class="contentsText">
+            <h2>Programming Skills</h2>
+            <p>Programming skills I have include Java, Python, CSS, HTML,
+              Big Query, and C. I learned Python, Java, and C at the University
+              , and other skills are related to either web design or data science
+              which I studied by myself. I have created few projects using Python and Java.
+            </p>
+          </div>
+        </li>
+
+        <li class="animationTarget">
+          <img src="./image/lec.jpeg" alt="">
+          <div class="contentsText">
+            <h2>Programming Courses</h2>
+            <p>The courses I have taken at the University of Toronto <br>
+              The conputer science courses I have taken involve a course about
+            Java, Python, and C. The Java course I have taken is a course
+          where students create a project by ourselves via github</p>
+          </div>
+        </li>
+
+        <li class="animationTarget">
+          <img src="./image/internship.jpg" alt="">
+          <div class="contentsText">
+            <h2>Software Internship</h2>
+            <p>Long-term Internship as a software Engineer <br>
+              I am working at a company called "Techouse" for almost
+            a year as a software engineer. I am responsible for one of the processes
+          of a project that will actually be passed to customers. I used Ruby and Ruby
+        on rails to complete projects.</p>
+          </div>
+        </li>
+
+        <li class="animationTarget">
+          <img src="./image/certificate.jpeg" alt="">
+          <div class="contentsText">
+            <h2>Certificates</h2>
+            <p>Google Analitics Professional Certificate       March 2022 ‒ June 2022<br>
+              I demonstrated hands-on experience with data cleaning (SQL and Google Sheets), data visualization (Tableau), project management, interpreting and communicating data analytics findings.</p>
+          </div>
+        </li>
+        </ul>
+    </main>
+    <div class="text-skill">
+      <h2>Skiils</h2>
+      <div class="row">
+        <div class="column">
+          <img src="./image/python.png" alt="Python" style="width:70%">
+        </div>
+        <div class="column">
+          <img src="./image/ava.png" alt="Java" style="width:70%">
+        </div>
+        <div class="column">
+          <img src="image/c.png" alt="C" style="width:70%">
+        </div>
+        <div class="column">
+          <img src="image/css.svg" alt="CSS" style="width:70%">
+        </div>
+        <div class="column">
+          <img src="image/html.png" alt="HTML" style="width:70%">
+        </div>
+      </div>
+      <p class="text">
+        Including the skills shown above, I have used JavaScript and R to complete
+        a project at the University of Toronto. I am able to create a report using 
+        R markdown which has visualization of the data or table of a sample. For JavaScript, 
+        I used it for the animation on the website I created. Moreover, I have completed
+        a coursera course called Google Analytics Professional Certificate. In this couse,
+        I demonstrated hands-on experience with data cleaning (SQL and Google Sheets), 
+        data visualization (Tableau), project management, interpreting and communicating 
+        data analytics findings. 
+      </p>
+
+      <div class="text-internship">
+        <h2>Engineering Internship at Techouse</h2>
+        <div id="banner">
+          <center>
+             <a target="banner" href="index.html" >
+               <img src="./image/banner.jpeg" border="0" alt="Internship Banner" style="width:100%;">
+             </a>
+          </center>
+       </div>
+      <p class="text">
+        Worked as software engineer at the company called Techouse. The programming
+         language used to complete projects is Ruby and Ruby on rails. I developed 
+         a website using ruby on rails and also had group project completing one of 
+         the processes of the actual product that the company is providing to customers.
+         For example ---
+      </p>
+      <p class="text">
+        The comapny I had an internship at is called Techouse. This company does
+        mainly two thiings. First they provides a platform that connects 
+        people who are looking for a job to a companies that are looking for 
+        workers. They connects people with companies by using various techniques
+        such as AI. Secondly, the compnay also provides human resources platform
+        called Cloud house which collects and use human resources effectively 
+        through techonologies. Unlike the most of the companies, Techouse asks
+        for customers' feedback for the platform so we can adjust to each 
+        customer's need. More information about Techouse can be found 
+        <a href="https://www.techouse.jp/">here</a>. 
+      </p>
+    </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset >= menu.offsetTop) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      });
+    </script>
+    <script>
+      const targetElement = document.querySelectorAll(".animationTarget");
+      document.addEventListener("scroll", function() {
+      for (let i = 0; i < targetElement.length; i++) {
+        const getElementDistance = targetElement[i].getBoundingClientRect().top + targetElement[i].clientHeight * 0.6;
+        if (window.innerHeight > getElementDistance) {
+            targetElement[i].classList.add("show");
+        } else {
+          targetElement[i].classList.remove("show")
+        }
+      }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./image/bg.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    z-index: 1;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+}
+
+.logo {
+    width: 250px;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 450;
+    color: rgb(247, 243, 243);
+}
+
+nav ul {
+    background: #000;
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.text {
+    padding: 20px 10%;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 3%;
+    max-height: 15%;
+    transition: all 0.6s;
+}
+
+nav.sticky .logo {
+    margin: 50px 0;
+    font-size: 1.6rem;
+}
+
+nav.sticky ul {
+    background: transparent;
+    font-size: 1.3rem;
+}
+
+body {
+    font-family: serif;
+    background-color: #333;
+    color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+header hl {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    white-space: nowrap;
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.contents li {
+    position: relative;
+    /* opacity: 0;
+    transform: translateY(50px);
+    transition: 1s; */
+}
+/*
+.contents li.show {
+    opacity: 1;
+    transform: none;
+} */
+
+.contents li.show h2,
+.contents li.show p,
+.contents li.show img {
+    transform: none;
+    opacity: 1;
+}
+
+.contents li:not(:first-of-type) {
+    margin-top: 200px;
+}
+
+.contents li:nth-of-type(odd) .contentsText {
+    right: 0;
+}
+
+.contents li:nth-of-type(even) .contentsText {
+    align-items: flex-start;
+}
+
+.contents li:nth-of-type(even) img {
+    margin-left: auto;
+    transform: translate(20px, 20px);
+}
+
+.contents li:nth-of-type(odd) img {
+    transform: translate(-20px, 20px);
+}
+
+.contentsText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 40px;
+}
+
+.contents h2 {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: rgba(20, 20, 20, .8);
+    padding: 10px 20px;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.contents p {
+    line-height: 1.6;
+    background-color: #555;
+    font-size: 16px;
+    max-width: 340px;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(20px);
+    transform: 1s;
+}
+
+.contents img {
+    width: 65%;
+    border-radius: 5px;
+    display: block;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 1s;
+}
+
+.text-area h2 {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: rgba(20, 20, 20, .8);
+    padding: 10px 20px;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    border-radius: 5px;
+}
+
+.text-area p {
+    font-size: 25px;
+    letter-spacing: 0.08em;
+}
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.text-skill h2 {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: rgba(20, 20, 20, .8);
+    padding: 10px 20px;
+    line-height: 1.4;
+    letter-spacing: .05em;
+    border-radius: 5px;
+}
